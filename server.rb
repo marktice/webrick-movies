@@ -1,7 +1,7 @@
 require 'sequel'
 require 'webrick'
 
-require_relative 'movies.rb'
+require_relative 'models/movies.rb'
 
 DB = Sequel.connect('sqlite://development')
 
@@ -12,7 +12,7 @@ class Router < WEBrick::HTTPServlet::AbstractServlet
     when '/'
       response.status = 200
       response['Content-Type'] = 'text/html'
-      movies = Movie.order(:title)
+      movies = Movie.order(:title) #gets all the movies sorted by title
       render = ERB.new(html_file('index.html.erb'))
       response.body = render.result(binding)
 

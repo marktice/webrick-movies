@@ -11,4 +11,5 @@ DB.create_table :movies do
   String :director
   String :actors
 end
-puts "woo database created"
+
+puts "Created movies table"

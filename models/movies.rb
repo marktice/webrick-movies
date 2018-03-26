@@ -5,5 +5,4 @@ DB = Sequel.connect('sqlite://development')
 class Movie < Sequel::Model
 
 end
-
-movies = Movie.all
+# movies = Movie.all
