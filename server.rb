@@ -1,7 +1,7 @@
 require 'sequel'
 require 'webrick'
 
-require_relative 'models/movies.rb'
+require_relative 'models/Movie.rb'
 
 DB = Sequel.connect('sqlite://development')
 
